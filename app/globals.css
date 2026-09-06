@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --paper: #F3F4EF;
+  --ink: #16231F;
+  --teal: #155E63;
+  --teal-dark: #0E4245;
+  --turmeric: #E29A2E;
+  --turmeric-dark: #B87A1B;
+  --brick: #B23A2E;
+  --line: #D8D6CB;
+  --card: #FFFFFF;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+}
+
+.font-mono-data {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
