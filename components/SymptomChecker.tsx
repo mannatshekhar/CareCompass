@@ -149,9 +149,7 @@ function IntroStep({ onStart }: { onStart: () => void }) {
   const { t } = useLanguage();
   return (
     <div className="pt-8">
-      <p className="font-mono-data text-xs uppercase tracking-widest mb-4" style={{ color: "var(--teal)" }}>
-        {t("pilotTag")}
-      </p>
+      
       <h1 className="font-display text-5xl leading-[1.1] mb-6" style={{ color: "var(--ink)" }}>
         {t("heroHeadlinePart1")}
         <span style={{ color: "var(--turmeric-dark)" }}>{t("heroHeadlinePart2")}</span>
