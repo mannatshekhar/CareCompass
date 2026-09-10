@@ -442,7 +442,7 @@ function openDirections(address: string) {
   const fallbackUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
   if (!navigator.geolocation) {
-    window.open(fallbackUrl, "_blank", "noopener,noreferrer");
+    window.location.href = fallbackUrl;
     return;
   }
 
@@ -450,10 +450,10 @@ function openDirections(address: string) {
     (position) => {
       const { latitude, longitude } = position.coords;
       const url = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${encodeURIComponent(address)}`;
-      window.open(url, "_blank", "noopener,noreferrer");
+      window.location.href = url;
     },
     () => {
-      window.open(fallbackUrl, "_blank", "noopener,noreferrer");
+      window.location.href = fallbackUrl;
     },
     { timeout: 8000 }
   );
@@ -474,6 +474,7 @@ function BookTestsStep({
   const coreTestNames = recommendedTests
     .filter((t) => t.priority === "core")
     .map((t) => t.testName);
+    
 
   return (
     <div>

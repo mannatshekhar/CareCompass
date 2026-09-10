@@ -61,10 +61,9 @@ export default function Header() {
   return (
     <header className="border-b" style={{ borderColor: "var(--line)" }}>
       <div className="max-w-3xl mx-auto px-5 py-4 flex items-center justify-between gap-3">
-        <p className="font-display text-lg font-semibold" style={{ color: "var(--teal-dark)" }}>
+        <a href="/" className="font-display text-lg font-semibold cursor-pointer" style={{ color: "var(--teal-dark)" }}>
           CareCompass
-        </p>
-
+        </a>
         <div className="flex items-center gap-3">
           {/* Language dropdown — native <select> for guaranteed reliable clicking */}
           <select
