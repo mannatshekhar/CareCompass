@@ -41,8 +41,8 @@ export async function POST(request: Request) {
     where: { userId: session.user.id },
   });
 
-  const lastCheckupAt = markCheckupDoneNow ? now : existing?.lastCheckupAt ?? null;
-  const remindAt = lastCheckupAt ? addMonths(lastCheckupAt, reminderFrequencyMonths) : null;
+  const lastCheckupAt = markCheckupDoneNow ? now : existing?.lastCheckupAt ?? now;
+  const remindAt = addMonths(lastCheckupAt, reminderFrequencyMonths);
 
   const profile = await prisma.checkupProfile.upsert({
     where: { userId: session.user.id },
