@@ -7,9 +7,20 @@ import Header from "@/components/Header";
 export const metadata: Metadata = {
   title: "CareCompass — Find the right test, not the upsold one",
   description:
-    "AI-assisted symptom-to-test navigator for Bengaluru: recommends the minimum tests you need, checks government scheme eligibility, and compares real lab prices.",
+    "AI-assisted symptom-to-test navigator for Bengaluru: recommends th...",
+  openGraph: {
+    title: "CareCompass — Find the right test, not the upsold one",
+    description: "AI-assisted symptom-to-test navigator for Bengaluru.",
+    url: "https://care-compass-alpha.vercel.app",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full antialiased">
